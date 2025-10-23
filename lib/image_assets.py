@@ -9,29 +9,29 @@ import io
 from typing import Dict, Any
 
 # Import all bitmap modules
-from .image_assets.beemenu import bitmaps as beemenu_bitmaps
-from .image_assets.boost import bitmaps as boost_bitmaps
-from .image_assets.buffs import bitmaps as buffs_bitmaps
-from .image_assets.collect import bitmaps as collect_bitmaps
-from .image_assets.convert import bitmaps as convert_bitmaps
-from .image_assets.fdc import bitmaps as fdc_bitmaps
-from .image_assets.general import bitmaps as general_bitmaps
-from .image_assets.gui import bitmaps as gui_bitmaps
-from .image_assets.inventory import bitmaps as inventory_bitmaps
-from .image_assets.kill import bitmaps as kill_bitmaps
-from .image_assets.memorymatch import bitmaps as memorymatch_bitmaps
-from .image_assets.mutator import bitmaps as mutator_bitmaps
-from .image_assets.mutatorgui import bitmaps as mutatorgui_bitmaps
-from .image_assets.night import bitmaps as night_bitmaps
-from .image_assets.offset import bitmaps as offset_bitmaps
-from .image_assets.perfstats import bitmaps as perfstats_bitmaps
-from .image_assets.quests import bitmaps as quests_bitmaps
-from .image_assets.reconnect import bitmaps as reconnect_bitmaps
-from .image_assets.reset import bitmaps as reset_bitmaps
-from .image_assets.sprinkler import bitmaps as sprinkler_bitmaps
-from .image_assets.stickerprinter import bitmaps as stickerprinter_bitmaps
-from .image_assets.stickerstack import bitmaps as stickerstack_bitmaps
-from .image_assets.webhook_gui import bitmaps as webhook_gui_bitmaps
+from nm_image_assets.beemenu.bitmaps import bitmaps as beemenu_bitmaps
+from nm_image_assets.boost.bitmaps import bitmaps as boost_bitmaps
+from nm_image_assets.buffs.bitmaps import bitmaps as buffs_bitmaps
+from nm_image_assets.collect.bitmaps import bitmaps as collect_bitmaps
+from nm_image_assets.convert.bitmaps import bitmaps as convert_bitmaps
+from nm_image_assets.fdc.bitmaps import bitmaps as fdc_bitmaps
+from nm_image_assets.general.bitmaps import bitmaps as general_bitmaps
+from nm_image_assets.gui.bitmaps import bitmaps as gui_bitmaps
+from nm_image_assets.inventory.bitmaps import bitmaps as inventory_bitmaps
+from nm_image_assets.kill.bitmaps import bitmaps as kill_bitmaps
+from nm_image_assets.memorymatch.bitmaps import bitmaps as memorymatch_bitmaps
+from nm_image_assets.mutator.bitmaps import bitmaps as mutator_bitmaps
+from nm_image_assets.mutatorgui.bitmaps import bitmaps as mutatorgui_bitmaps
+from nm_image_assets.night.bitmaps import bitmaps as night_bitmaps
+from nm_image_assets.offset.bitmaps import bitmaps as offset_bitmaps
+from nm_image_assets.perfstats.bitmaps import bitmaps as perfstats_bitmaps
+from nm_image_assets.quests.bitmaps import bitmaps as quests_bitmaps
+from nm_image_assets.reconnect.bitmaps import bitmaps as reconnect_bitmaps
+from nm_image_assets.reset.bitmaps import bitmaps as reset_bitmaps
+from nm_image_assets.sprinkler.bitmaps import bitmaps as sprinkler_bitmaps
+from nm_image_assets.stickerprinter.bitmaps import bitmaps as stickerprinter_bitmaps
+from nm_image_assets.stickerstack.bitmaps import bitmaps as stickerstack_bitmaps
+from nm_image_assets.webhook_gui.bitmaps import bitmaps as webhook_gui_bitmaps
 
 # Combine all bitmaps into a single dictionary
 BITMAPS = {
