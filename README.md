@@ -27,6 +27,8 @@ An open-source Bee Swarm Simulator macro for macOS written in Python!<br>
 
 This is a **macOS port** of the original Windows AutoHotkey version of Natro Macro. While it aims to provide the same functionality, it may have limitations and differences due to platform differences.
 
+Note: This port is untested, updates may be infrequent, and using Existance Macro is recommended.
+
 ## 🛠️ Installation
 
 ### Prerequisites
@@ -250,7 +252,7 @@ When converting from the original AHK version:
 
 ## 📝 License
 
-Copyright © 2022-2024 Natro Team  
+Copyright © 2022-2025 Natro Team & LaganYT (Porter) 
 This project is licensed under GNU GPL v3.0
 
 ## ⚠️ Disclaimer
