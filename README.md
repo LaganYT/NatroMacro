@@ -147,7 +147,7 @@ This macOS version replaces the Windows AutoHotkey functionality with:
 ### ✅ **CONVERSION COMPLETE - ALL AHK FILES CONVERTED AND DELETED!**
 
 **Total Conversion: 100/100 AHK Files → Python Functions**
-**Cleanup: All original AHK files removed**
+**Cleanup: All original AHK files and Windows-specific files removed**
 
 #### **Path Files (99 total functions)**
 - ✅ **gtc-* files (25)**: Go To Collection (blender, antpass, dispensers, machines, etc.)
@@ -227,6 +227,7 @@ all_bitmaps = list_bitmaps()                   # List all available bitmaps
 - All pattern functions are syntactically correct
 - All bitmap assets are properly converted and accessible
 - All original AHK files have been deleted
+- All Windows-specific files (.msstyles, .dll) have been removed
 - Main macro framework is fully operational
 
 ## 🐛 Troubleshooting
@@ -281,7 +282,7 @@ natro_macro.py              # Main macro script with modular architecture
 │   └── path_handler.py     # 99 movement path functions
 ├── patterns/
 │   └── pattern_handler.py  # 24 gathering pattern functions
-├── nm_image_assets/        # Original image files (PNG, etc.)
+├── nm_image_assets/        # Original PNG image files
 ├── lib/image_assets/       # Converted bitmap assets (Python modules)
 ├── submacros/             # Background automation scripts (empty)
 ├── start.sh               # Cross-platform startup script
