@@ -408,7 +408,7 @@ def gtc_antpass(path_handler: PathHandler, move_method: str = "walk"):
     Gtc-Antpass path
     Converted from paths/gtc-antpass.ahk
     """
-    ﻿nm_Walk(3, FwdKey)
+    path_handler.nm_walk(3, "FwdKey")
     path_handler.nm_walk(52, "LeftKey")
     path_handler.nm_walk(3, "FwdKey")
     path_handler.send_key_sequence("{{")
@@ -439,69 +439,67 @@ def gtc_blender(path_handler: PathHandler, move_method: str = "walk"):
     Gtc-Blender path
     Converted from paths/gtc-blender.ahk
     """
-    ﻿if (MoveMethod = "walk")
-    {
-    path_handler.nm_gotoramp()
-    path_handler.nm_walk(67.5, "BackKey", "LeftKey")
-    path_handler.send_key_sequence("{{")
-    path_handler.nm_walk(31, "FwdKey")
-    path_handler.nm_walk(7.8, "LeftKey")
-    path_handler.nm_walk(10, "BackKey")
-    path_handler.nm_walk(5, "RightKey")
-    path_handler.nm_walk(1.5, "FwdKey")
-    path_handler.nm_walk(60, "LeftKey")
-    path_handler.nm_walk(3.75, "RightKey")
-    path_handler.nm_walk(38, "FwdKey")
-    path_handler.send_key_sequence("{{")
-    path_handler.nm_walk(14, "RightKey")
-    path_handler.nm_walk(15, "FwdKey", "LeftKey")
-    path_handler.nm_walk(1, "BackKey")
-    path_handler.hyper_sleep(200)
-    path_handler.nm_walk(25, "RightKey")
-    Hypersleep(200)
-    path_handler.send_key_sequence("{{")
-    Hypersleep(200)
-    # inside badge shop
-    path_handler.nm_walk(15, "FwdKey")
-    path_handler.nm_walk(1, "FwdKey", "RightKey")
-    # align with corner
-    path_handler.nm_walk(7, "FwdKey")
-    path_handler.nm_walk(3, "BackKey")
-    path_handler.nm_walk(26, "LeftKey")
-    path_handler.nm_walk(1, "FwdKey", "LeftKey")
-    path_handler.hyper_sleep(300)
+    if move_method == "walk":
+        path_handler.nm_gotoramp()
+        path_handler.nm_walk(67.5, "BackKey", "LeftKey")
+        path_handler.send_key_sequence("{{")
+        path_handler.nm_walk(31, "FwdKey")
+        path_handler.nm_walk(7.8, "LeftKey")
+        path_handler.nm_walk(10, "BackKey")
+        path_handler.nm_walk(5, "RightKey")
+        path_handler.nm_walk(1.5, "FwdKey")
+        path_handler.nm_walk(60, "LeftKey")
+        path_handler.nm_walk(3.75, "RightKey")
+        path_handler.nm_walk(38, "FwdKey")
+        path_handler.send_key_sequence("{{")
+        path_handler.nm_walk(14, "RightKey")
+        path_handler.nm_walk(15, "FwdKey", "LeftKey")
+        path_handler.nm_walk(1, "BackKey")
+        path_handler.hyper_sleep(200)
+        path_handler.nm_walk(25, "RightKey")
+        path_handler.hyper_sleep(200)
+        path_handler.send_key_sequence("{{")
+        path_handler.hyper_sleep(200)
+        # inside badge shop
+        path_handler.nm_walk(15, "FwdKey")
+        path_handler.nm_walk(1, "FwdKey", "RightKey")
+        # align with corner
+        path_handler.nm_walk(7, "FwdKey")
+        path_handler.nm_walk(3, "BackKey")
+        path_handler.nm_walk(26, "LeftKey")
+        path_handler.nm_walk(1, "FwdKey", "LeftKey")
+        path_handler.hyper_sleep(300)
     else:
-    {
-    path_handler.nm_gotoramp()
-    path_handler.nm_gotocannon()
-    path_handler.send_key_sequence("{{e down}}")
-    path_handler.hyper_sleep(100)
-    path_handler.send_key_sequence("{{e up}}{{")
-    path_handler.hyper_sleep(925)
-    path_handler.send_key_sequence("{{space 2}}")
-    path_handler.hyper_sleep(2850)
-    path_handler.send_key_sequence("{{")
-    path_handler.hyper_sleep(1450)
-    path_handler.send_key_sequence("{{space}}{{")
-    path_handler.hyper_sleep(600)
-    # corner align
-    path_handler.nm_walk(10, "FwdKey", "LeftKey")
-    path_handler.nm_walk(10, "LeftKey", "FwdKey")
-    path_handler.nm_walk(1, "BackKey")
-    path_handler.hyper_sleep(200)
-    path_handler.nm_walk(25, "RightKey")
-    Hypersleep(200)
-    path_handler.send_key_sequence("{{")
-    Hypersleep(200)
-    # inside badge shop
-    path_handler.nm_walk(15, "FwdKey")
-    path_handler.nm_walk(1, "FwdKey", "RightKey")
-    # align with corner
-    path_handler.nm_walk(7, "FwdKey")
-    path_handler.nm_walk(3, "BackKey")
-    path_handler.nm_walk(26, "LeftKey")
-    path_handler.nm_walk(1, "FwdKey", "LeftKey")
-    path_handler.hyper_sleep(300)
+        path_handler.nm_gotoramp()
+        path_handler.nm_gotocannon()
+        path_handler.send_key_sequence("{{e down}}")
+        path_handler.hyper_sleep(100)
+        path_handler.send_key_sequence("{{e up}}{{")
+        path_handler.hyper_sleep(925)
+        path_handler.send_key_sequence("{{space 2}}")
+        path_handler.hyper_sleep(2850)
+        path_handler.send_key_sequence("{{")
+        path_handler.hyper_sleep(1450)
+        path_handler.send_key_sequence("{{space}}{{")
+        path_handler.hyper_sleep(600)
+        # corner align
+        path_handler.nm_walk(10, "FwdKey", "LeftKey")
+        path_handler.nm_walk(10, "LeftKey", "FwdKey")
+        path_handler.nm_walk(1, "BackKey")
+        path_handler.hyper_sleep(200)
+        path_handler.nm_walk(25, "RightKey")
+        path_handler.hyper_sleep(200)
+        path_handler.send_key_sequence("{{")
+        path_handler.hyper_sleep(200)
+        # inside badge shop
+        path_handler.nm_walk(15, "FwdKey")
+        path_handler.nm_walk(1, "FwdKey", "RightKey")
+        # align with corner
+        path_handler.nm_walk(7, "FwdKey")
+        path_handler.nm_walk(3, "BackKey")
+        path_handler.nm_walk(26, "LeftKey")
+        path_handler.nm_walk(1, "FwdKey", "LeftKey")
+        path_handler.hyper_sleep(300)
 
 
 def gtc_blueberrydis(path_handler: PathHandler, move_method: str = "walk"):
@@ -509,7 +507,7 @@ def gtc_blueberrydis(path_handler: PathHandler, move_method: str = "walk"):
     Gtc-Blueberrydis path
     Converted from paths/gtc-blueberrydis.ahk
     """
-    ﻿if (MoveMethod = "walk")
+    if MoveMethod == "walk":
     {
     path_handler.nm_gotoramp()
     path_handler.nm_walk(88.875, "BackKey", "LeftKey")
@@ -553,7 +551,7 @@ def gtc_candles(path_handler: PathHandler, move_method: str = "walk"):
     Gtc-Candles path
     Converted from paths/gtc-candles.ahk
     """
-    ﻿nm_gotoramp()
+    nm_gotoramp()
     Send "{space down}{" RightKey " down}"
     Sleep 100
     Send "{space up}"
@@ -592,7 +590,7 @@ def gtc_clock(path_handler: PathHandler, move_method: str = "walk"):
     Gtc-Clock path
     Converted from paths/gtc-clock.ahk
     """
-    ﻿if (MoveMethod = "walk")
+    if MoveMethod == "walk":
     {
     path_handler.nm_gotoramp()
     path_handler.nm_walk(44.75, "BackKey", "LeftKey")
@@ -640,7 +638,7 @@ def gtc_coconutdis(path_handler: PathHandler, move_method: str = "walk"):
     Gtc-Coconutdis path
     Converted from paths/gtc-coconutdis.ahk
     """
-    ﻿nm_gotoramp()
+    nm_gotoramp()
     Send "{space down}{" RightKey " down}"
     Sleep 100
     Send "{space up}"
@@ -736,7 +734,7 @@ def gtc_feast(path_handler: PathHandler, move_method: str = "walk"):
     Gtc-Feast path
     Converted from paths/gtc-feast.ahk
     """
-    ﻿if (MoveMethod = "walk")
+    if MoveMethod == "walk":
     {
     path_handler.nm_gotoramp()
     path_handler.nm_walk(67.5, "BackKey", "LeftKey")
@@ -784,7 +782,7 @@ def gtc_gingerbread(path_handler: PathHandler, move_method: str = "walk"):
     Gtc-Gingerbread path
     Converted from paths/gtc-gingerbread.ahk
     """
-    ﻿nm_gotoramp()
+    nm_gotoramp()
     path_handler.send_key_sequence("{{")
     path_handler.nm_walk(4.7, "RightKey")
     path_handler.send_key_sequence("{{space down}}")
@@ -805,7 +803,7 @@ def gtc_gluedis(path_handler: PathHandler, move_method: str = "walk"):
     Gtc-Gluedis path
     Converted from paths/gtc-gluedis.ahk
     """
-    ﻿if (MoveMethod = "walk")
+    if MoveMethod == "walk":
     {
     path_handler.nm_walk(3, "FwdKey")
     path_handler.nm_walk(52, "LeftKey")
@@ -839,7 +837,7 @@ def gtc_gluedis(path_handler: PathHandler, move_method: str = "walk"):
     path_handler.nm_walk(5.79, "FwdKey", "RightKey")
     path_handler.nm_walk(50, "FwdKey")
     path_handler.send_key_sequence("{{space down}}")
-    Hypersleep(300)
+    path_handler.hyper_sleep(300)
     path_handler.send_key_sequence("{{space up}}")
     path_handler.nm_walk(6, "FwdKey")
     path_handler.send_key_sequence("{{space down}}")
@@ -870,7 +868,7 @@ def gtc_gummybeacon(path_handler: PathHandler, move_method: str = "walk"):
     Gtc-Gummybeacon path
     Converted from paths/gtc-gummybeacon.ahk
     """
-    ﻿nm_gotoramp()
+    nm_gotoramp()
     path_handler.nm_gotocannon()
     path_handler.send_key_sequence("{{e down}}")
     path_handler.hyper_sleep(100)
@@ -889,7 +887,7 @@ def gtc_honeydis(path_handler: PathHandler, move_method: str = "walk"):
     Gtc-Honeydis path
     Converted from paths/gtc-honeydis.ahk
     """
-    ﻿nm_Walk(1, FwdKey)
+    nm_Walk(1, FwdKey)
     nm_Walk(9.2*(7-HiveSlot) + 10, LeftKey)
     path_handler.nm_walk(2, "BackKey", "RightKey")
     path_handler.nm_walk(2, "BackKey")
@@ -900,7 +898,7 @@ def gtc_honeylb(path_handler: PathHandler, move_method: str = "walk"):
     Gtc-Honeylb path
     Converted from paths/gtc-honeylb.ahk
     """
-    ﻿nm_gotoramp()
+    nm_gotoramp()
     path_handler.nm_walk(18, "LeftKey", "BackKey")
     path_handler.nm_walk(8, "BackKey")
     path_handler.send_key_sequence("{{")
@@ -912,7 +910,7 @@ def gtc_honeystorm(path_handler: PathHandler, move_method: str = "walk"):
     Gtc-Honeystorm path
     Converted from paths/gtc-honeystorm.ahk
     """
-    ﻿if (MoveMethod = "walk")
+    if MoveMethod == "walk":
     {
     path_handler.nm_gotoramp()
     path_handler.nm_walk(44.75, "BackKey", "LeftKey")
@@ -948,7 +946,7 @@ def gtc_lidart(path_handler: PathHandler, move_method: str = "walk"):
     Gtc-Lidart path
     Converted from paths/gtc-lidart.ahk
     """
-    ﻿if (MoveMethod = "walk")
+    if MoveMethod == "walk":
     {
     path_handler.nm_gotoramp()
     path_handler.nm_walk(67.5, "BackKey", "LeftKey")
@@ -1040,9 +1038,9 @@ def gtc_megamm(path_handler: PathHandler, move_method: str = "walk"):
     path_handler.nm_walk(1, "BackKey")
     path_handler.hyper_sleep(200)
     path_handler.nm_walk(25, "RightKey")
-    Hypersleep(200)
+    path_handler.hyper_sleep(200)
     path_handler.send_key_sequence("{{")
-    Hypersleep(200)
+    path_handler.hyper_sleep(200)
     # inside badge shop
     path_handler.nm_walk(15, "FwdKey")
     path_handler.nm_walk(1, "FwdKey", "RightKey")
@@ -1204,7 +1202,7 @@ def gtc_rbpdelevel(path_handler: PathHandler, move_method: str = "walk"):
     Gtc-Rbpdelevel path
     Converted from paths/gtc-rbpdelevel.ahk
     """
-    ﻿nm_gotoramp()
+    nm_gotoramp()
     path_handler.nm_gotocannon()
     path_handler.send_key_sequence("{{e down}}")
     path_handler.hyper_sleep(100)
@@ -1230,7 +1228,7 @@ def gtc_robopass(path_handler: PathHandler, move_method: str = "walk"):
     Gtc-Robopass path
     Converted from paths/gtc-robopass.ahk
     """
-    ﻿if (MoveMethod = "walk")
+    if MoveMethod == "walk":
     {
     path_handler.nm_gotoramp()
     path_handler.nm_walk(67.5, "BackKey", "LeftKey")
@@ -1299,7 +1297,7 @@ def gtc_royaljellydis(path_handler: PathHandler, move_method: str = "walk"):
     Gtc-Royaljellydis path
     Converted from paths/gtc-royaljellydis.ahk
     """
-    ﻿nm_gotoramp()
+    nm_gotoramp()
     path_handler.nm_gotocannon()
     path_handler.send_key_sequence("{{e down}}")
     path_handler.hyper_sleep(100)
@@ -1321,7 +1319,7 @@ def gtc_samovar(path_handler: PathHandler, move_method: str = "walk"):
     Gtc-Samovar path
     Converted from paths/gtc-samovar.ahk
     """
-    ﻿if (MoveMethod = "walk")
+    if MoveMethod == "walk":
     {
     path_handler.nm_gotoramp()
     path_handler.nm_walk(67.5, "BackKey", "LeftKey")
@@ -1401,7 +1399,7 @@ def gtc_snowmachine(path_handler: PathHandler, move_method: str = "walk"):
     Gtc-Snowmachine path
     Converted from paths/gtc-snowmachine.ahk
     """
-    ﻿if (MoveMethod = "walk")
+    if MoveMethod == "walk":
     {
     switch HiveSlot
     {
@@ -1499,7 +1497,7 @@ def gtc_stickerPrinter(path_handler: PathHandler, move_method: str = "walk"):
     Gtc-Stickerprinter path
     Converted from paths/gtc-stickerPrinter.ahk
     """
-    ﻿if (MoveMethod = "walk")
+    if MoveMethod == "walk":
     {
     path_handler.nm_gotoramp()
     path_handler.nm_walk(67.5, "BackKey", "LeftKey")
@@ -1538,7 +1536,7 @@ def gtc_stickerstack(path_handler: PathHandler, move_method: str = "walk"):
     Gtc-Stickerstack path
     Converted from paths/gtc-stickerstack.ahk
     """
-    if (MoveMethod = "cannon")
+    if MoveMethod == "cannon":
     {
     path_handler.nm_gotoramp()
     path_handler.nm_gotocannon()
@@ -1615,7 +1613,7 @@ def gtc_stockings(path_handler: PathHandler, move_method: str = "walk"):
     Gtc-Stockings path
     Converted from paths/gtc-stockings.ahk
     """
-    ﻿if (MoveMethod = "walk")
+    if MoveMethod == "walk":
     {
     path_handler.nm_gotoramp()
     path_handler.nm_walk(47.25, "BackKey", "LeftKey")
@@ -1642,7 +1640,7 @@ def gtc_strawberrydis(path_handler: PathHandler, move_method: str = "walk"):
     Gtc-Strawberrydis path
     Converted from paths/gtc-strawberrydis.ahk
     """
-    ﻿if (HiveBees > 25) {
+    if HiveBees > 25) {
     path_handler.nm_gotoramp()
     Send "{space down}{" RightKey " down}"
     Sleep 100
@@ -1698,12 +1696,12 @@ def gtc_strawberrydis(path_handler: PathHandler, move_method: str = "walk"):
     # dual path 230629 noobyguy
 
 
-def gtc_treatdis(path_handler: PathHandler, move_method: str = "walk"):
+def gtc_treatdis(path_handler: PathHandler, move_method: str == "walk"::
     """
     Gtc-Treatdis path
     Converted from paths/gtc-treatdis.ahk
     """
-    ﻿if (MoveMethod = "walk")
+    if MoveMethod == "walk":
     {
     path_handler.nm_gotoramp()
     path_handler.nm_walk(67.5, "BackKey", "LeftKey")
@@ -1808,7 +1806,7 @@ def gtc_wintermm(path_handler: PathHandler, move_method: str = "walk"):
     Gtc-Wintermm path
     Converted from paths/gtc-wintermm.ahk
     """
-    ﻿if (MoveMethod = "walk")
+    if MoveMethod == "walk":
     {
     path_handler.nm_gotoramp()
     path_handler.nm_walk(67.5, "BackKey", "LeftKey")
@@ -1877,7 +1875,7 @@ def gtc_wreath(path_handler: PathHandler, move_method: str = "walk"):
     Gtc-Wreath path
     Converted from paths/gtc-wreath.ahk
     """
-    ﻿nm_gotoramp()
+    nm_gotoramp()
     Send "{space down}{" RightKey " down}"
     Sleep 100
     Send "{space up}"
@@ -1894,7 +1892,7 @@ def gtf_bamboo(path_handler: PathHandler, move_method: str = "walk"):
     Gtf-Bamboo path
     Converted from paths/gtf-bamboo.ahk
     """
-    ﻿if (MoveMethod = "Cannon") {
+    if MoveMethod == "Cannon": {
     path_handler.nm_gotoramp()
     path_handler.nm_gotocannon()
     path_handler.send_key_sequence("{{e down}}")
@@ -1923,7 +1921,7 @@ def gtf_blueflower(path_handler: PathHandler, move_method: str = "walk"):
     Gtf-Blueflower path
     Converted from paths/gtf-blueflower.ahk
     """
-    ﻿if (MoveMethod = "Cannon") {
+    if MoveMethod == "Cannon": {
     path_handler.nm_gotoramp()
     path_handler.nm_gotocannon()
     path_handler.send_key_sequence("{{e down}}")
@@ -1947,7 +1945,7 @@ def gtf_cactus(path_handler: PathHandler, move_method: str = "walk"):
     Gtf-Cactus path
     Converted from paths/gtf-cactus.ahk
     """
-    ﻿if (MoveMethod = "Cannon") {
+    if MoveMethod == "Cannon": {
     path_handler.nm_gotoramp()
     path_handler.nm_gotocannon()
     path_handler.send_key_sequence("{{e down}}")
@@ -1980,7 +1978,7 @@ def gtf_clover(path_handler: PathHandler, move_method: str = "walk"):
     Gtf-Clover path
     Converted from paths/gtf-clover.ahk
     """
-    ﻿if (MoveMethod = "Cannon") {
+    if MoveMethod == "Cannon": {
     path_handler.nm_gotoramp()
     path_handler.nm_gotocannon()
     path_handler.send_key_sequence("{{e down}}")
@@ -2011,7 +2009,7 @@ def gtf_coconut(path_handler: PathHandler, move_method: str = "walk"):
     Gtf-Coconut path
     Converted from paths/gtf-coconut.ahk
     """
-    ﻿nm_gotoramp()
+    nm_gotoramp()
     Send "{space down}{" RightKey " down}"
     Sleep 100
     Send "{space up}"
@@ -2052,7 +2050,7 @@ def gtf_dandelion(path_handler: PathHandler, move_method: str = "walk"):
     Gtf-Dandelion path
     Converted from paths/gtf-dandelion.ahk
     """
-    ﻿nm_gotoramp()
+    nm_gotoramp()
     path_handler.nm_walk(39, "BackKey", "LeftKey")
     path_handler.nm_walk(14, "LeftKey")
     path_handler.send_key_sequence("{{")
@@ -2063,7 +2061,7 @@ def gtf_mountaintop(path_handler: PathHandler, move_method: str = "walk"):
     Gtf-Mountaintop path
     Converted from paths/gtf-mountaintop.ahk
     """
-    ﻿if (MoveMethod = "Cannon") {
+    if MoveMethod == "Cannon": {
     path_handler.nm_gotoramp()
     path_handler.nm_gotocannon()
     path_handler.send_key_sequence("{{e down}}")
@@ -2101,7 +2099,7 @@ def gtf_mushroom(path_handler: PathHandler, move_method: str = "walk"):
     Gtf-Mushroom path
     Converted from paths/gtf-mushroom.ahk
     """
-    ﻿nm_gotoramp()
+    nm_gotoramp()
     path_handler.nm_walk(36, "BackKey", "LeftKey")
     path_handler.send_key_sequence("{{")
     path_handler.nm_walk(31.5, "FwdKey")
@@ -2112,7 +2110,7 @@ def gtf_pepper(path_handler: PathHandler, move_method: str = "walk"):
     Gtf-Pepper path
     Converted from paths/gtf-pepper.ahk
     """
-    ﻿nm_gotoramp()
+    nm_gotoramp()
     Send "{space down}{" RightKey " down}"
     Sleep 100
     Send "{space up}"
@@ -2170,7 +2168,7 @@ def gtf_pineapple(path_handler: PathHandler, move_method: str = "walk"):
     Gtf-Pineapple path
     Converted from paths/gtf-pineapple.ahk
     """
-    ﻿if (MoveMethod = "Cannon") {
+    if MoveMethod == "Cannon": {
     path_handler.nm_gotoramp()
     path_handler.nm_gotocannon()
     path_handler.send_key_sequence("{{e down}}")
@@ -2203,7 +2201,7 @@ def gtf_pinetree(path_handler: PathHandler, move_method: str = "walk"):
     Gtf-Pinetree path
     Converted from paths/gtf-pinetree.ahk
     """
-    ﻿if (MoveMethod = "Cannon") {
+    if MoveMethod == "Cannon": {
     path_handler.nm_gotoramp()
     path_handler.nm_gotocannon()
     path_handler.send_key_sequence("{{e down}}")
@@ -2236,7 +2234,7 @@ def gtf_pumpkin(path_handler: PathHandler, move_method: str = "walk"):
     Gtf-Pumpkin path
     Converted from paths/gtf-pumpkin.ahk
     """
-    ﻿if (MoveMethod = "Cannon") {
+    if MoveMethod == "Cannon": {
     path_handler.nm_gotoramp()
     path_handler.nm_gotocannon()
     path_handler.send_key_sequence("{{e down}}")
@@ -2272,7 +2270,7 @@ def gtf_rose(path_handler: PathHandler, move_method: str = "walk"):
     Gtf-Rose path
     Converted from paths/gtf-rose.ahk
     """
-    ﻿if (MoveMethod = "Cannon") {
+    if MoveMethod == "Cannon": {
     path_handler.nm_gotoramp()
     path_handler.nm_gotocannon()
     path_handler.send_key_sequence("{{e down}}")
@@ -2312,7 +2310,7 @@ def gtf_spider(path_handler: PathHandler, move_method: str = "walk"):
     Gtf-Spider path
     Converted from paths/gtf-spider.ahk
     """
-    ﻿if (MoveMethod = "Cannon") {
+    if MoveMethod == "Cannon": {
     path_handler.nm_gotoramp()
     path_handler.nm_gotocannon()
     path_handler.send_key_sequence("{{e down}}")
@@ -2336,7 +2334,7 @@ def gtf_strawberry(path_handler: PathHandler, move_method: str = "walk"):
     Gtf-Strawberry path
     Converted from paths/gtf-strawberry.ahk
     """
-    ﻿if (MoveMethod = "Cannon") {
+    if MoveMethod == "Cannon": {
     path_handler.nm_gotoramp()
     path_handler.nm_gotocannon()
     path_handler.send_key_sequence("{{e down}}")
@@ -2363,7 +2361,7 @@ def gtf_stump(path_handler: PathHandler, move_method: str = "walk"):
     Gtf-Stump path
     Converted from paths/gtf-stump.ahk
     """
-    ﻿if (MoveMethod = "Cannon") {
+    if MoveMethod == "Cannon": {
     path_handler.nm_gotoramp()
     path_handler.nm_gotocannon()
     path_handler.send_key_sequence("{{e down}}")
@@ -2401,7 +2399,7 @@ def gtf_sunflower(path_handler: PathHandler, move_method: str = "walk"):
     Gtf-Sunflower path
     Converted from paths/gtf-sunflower.ahk
     """
-    ﻿nm_gotoramp()
+    nm_gotoramp()
     path_handler.nm_walk(9, "BackKey")
     path_handler.nm_walk(6.75, "BackKey", "RightKey")
     path_handler.send_key_sequence("{{")
@@ -2414,7 +2412,7 @@ def gtp_bamboo(path_handler: PathHandler, move_method: str = "walk"):
     Gtp-Bamboo path
     Converted from paths/gtp-bamboo.ahk
     """
-    ﻿if (MoveMethod = "walk")
+    if MoveMethod == "walk":
     {
     path_handler.nm_gotoramp()
     path_handler.nm_walk(67.5, "BackKey", "LeftKey")
@@ -2455,7 +2453,7 @@ def gtp_blueflower(path_handler: PathHandler, move_method: str = "walk"):
     Gtp-Blueflower path
     Converted from paths/gtp-blueflower.ahk
     """
-    ﻿if (MoveMethod = "walk" ) {
+    if MoveMethod == "walk" : {
     path_handler.nm_gotoramp()
     path_handler.nm_walk(88.875, "BackKey", "LeftKey")
     path_handler.nm_walk(27, "LeftKey")
@@ -2490,7 +2488,7 @@ def gtp_cactus(path_handler: PathHandler, move_method: str = "walk"):
     Gtp-Cactus path
     Converted from paths/gtp-cactus.ahk
     """
-    ﻿if (MoveMethod = "walk")
+    if MoveMethod == "walk":
     {
     path_handler.nm_gotoramp()
     path_handler.nm_walk(67.5, "BackKey", "LeftKey")
@@ -2533,7 +2531,7 @@ def gtp_clover(path_handler: PathHandler, move_method: str = "walk"):
     Gtp-Clover path
     Converted from paths/gtp-clover.ahk
     """
-    ﻿if (MoveMethod = "walk")
+    if MoveMethod == "walk":
     {
     path_handler.nm_gotoramp()
     path_handler.nm_walk(44.75, "BackKey", "LeftKey")
@@ -2571,7 +2569,7 @@ def gtp_coconut(path_handler: PathHandler, move_method: str = "walk"):
     Gtp-Coconut path
     Converted from paths/gtp-coconut.ahk
     """
-    ﻿nm_gotoramp()
+    nm_gotoramp()
     Send "{space down}{" RightKey " down}"
     Sleep 100
     Send "{space up}"
@@ -2612,7 +2610,7 @@ def gtp_dandelion(path_handler: PathHandler, move_method: str = "walk"):
     Gtp-Dandelion path
     Converted from paths/gtp-dandelion.ahk
     """
-    ﻿nm_gotoramp()
+    nm_gotoramp()
     path_handler.send_key_sequence("{{")
     path_handler.nm_walk(39, "BackKey")
     path_handler.send_key_sequence("{{")
@@ -2625,7 +2623,7 @@ def gtp_mountaintop(path_handler: PathHandler, move_method: str = "walk"):
     Gtp-Mountaintop path
     Converted from paths/gtp-mountaintop.ahk
     """
-    ﻿if (MoveMethod = "walk")
+    if MoveMethod == "walk":
     {
     path_handler.nm_gotoramp()
     path_handler.nm_walk(67.5, "BackKey", "LeftKey")
@@ -2661,7 +2659,7 @@ def gtp_mushroom(path_handler: PathHandler, move_method: str = "walk"):
     Gtp-Mushroom path
     Converted from paths/gtp-mushroom.ahk
     """
-    ﻿nm_gotoramp()
+    nm_gotoramp()
     path_handler.send_key_sequence("{{")
     path_handler.hyper_sleep(200)
     path_handler.nm_walk(55.75, "FwdKey", "RightKey")
@@ -2676,7 +2674,7 @@ def gtp_pepper(path_handler: PathHandler, move_method: str = "walk"):
     Gtp-Pepper path
     Converted from paths/gtp-pepper.ahk
     """
-    ﻿nm_gotoramp()
+    nm_gotoramp()
     Send "{space down}{" RightKey " down}"
     Sleep 100
     Send "{space up}"
@@ -2737,7 +2735,7 @@ def gtp_pineapple(path_handler: PathHandler, move_method: str = "walk"):
     Gtp-Pineapple path
     Converted from paths/gtp-pineapple.ahk
     """
-    ﻿If (HiveBees >= 25) && (MoveMethod = "cannon")
+    If (HiveBees >= 25) && (MoveMethod = "cannon")
     {
     path_handler.nm_gotoramp()
     path_handler.nm_gotocannon()
@@ -2782,7 +2780,7 @@ def gtp_pinetree(path_handler: PathHandler, move_method: str = "walk"):
     Gtp-Pinetree path
     Converted from paths/gtp-pinetree.ahk
     """
-    ﻿If (MoveMethod = "walk")
+    If (MoveMethod = "walk")
     {
     path_handler.nm_gotoramp()
     path_handler.nm_walk(67.5, "BackKey", "LeftKey")
@@ -2833,7 +2831,7 @@ def gtp_pumpkin(path_handler: PathHandler, move_method: str = "walk"):
     Gtp-Pumpkin path
     Converted from paths/gtp-pumpkin.ahk
     """
-    ﻿if (MoveMethod = "walk")
+    if MoveMethod == "walk":
     {
     path_handler.nm_gotoramp()
     path_handler.nm_walk(67.5, "BackKey", "LeftKey")
@@ -2875,7 +2873,7 @@ def gtp_rose(path_handler: PathHandler, move_method: str = "walk"):
     Gtp-Rose path
     Converted from paths/gtp-rose.ahk
     """
-    ﻿if (MoveMethod = "walk")
+    if MoveMethod == "walk":
     {
     path_handler.nm_gotoramp()
     path_handler.nm_walk(67.5, "BackKey", "LeftKey")
@@ -2925,7 +2923,7 @@ def gtp_spider(path_handler: PathHandler, move_method: str = "walk"):
     Gtp-Spider path
     Converted from paths/gtp-spider.ahk
     """
-    ﻿if (MoveMethod = "walk") {
+    if MoveMethod == "walk": {
     path_handler.nm_gotoramp()
     path_handler.nm_walk(67.5, "BackKey", "LeftKey")
     path_handler.send_key_sequence("{{")
@@ -2955,7 +2953,7 @@ def gtp_strawberry(path_handler: PathHandler, move_method: str = "walk"):
     Gtp-Strawberry path
     Converted from paths/gtp-strawberry.ahk
     """
-    ﻿if (MoveMethod = "walk") {
+    if MoveMethod == "walk": {
     path_handler.nm_gotoramp()
     path_handler.nm_walk(67.5, "BackKey", "LeftKey")
     path_handler.send_key_sequence("{{")
@@ -2990,7 +2988,7 @@ def gtp_stump(path_handler: PathHandler, move_method: str = "walk"):
     Gtp-Stump path
     Converted from paths/gtp-stump.ahk
     """
-    ﻿If (HiveBees >= 25) && (MoveMethod = "cannon") {
+    If (HiveBees >= 25) && (MoveMethod = "cannon") {
     path_handler.nm_gotoramp()
     path_handler.nm_gotocannon()
     path_handler.send_key_sequence("{{e down}}")
@@ -3029,7 +3027,7 @@ def gtp_sunflower(path_handler: PathHandler, move_method: str = "walk"):
     Gtp-Sunflower path
     Converted from paths/gtp-sunflower.ahk
     """
-    ﻿nm_gotoramp()
+    nm_gotoramp()
     path_handler.nm_walk(14, "BackKey")
     path_handler.send_key_sequence("{{")
     path_handler.nm_walk(25, "RightKey")
@@ -3043,7 +3041,7 @@ def gtq_black(path_handler: PathHandler, move_method: str = "walk"):
     Gtq-Black path
     Converted from paths/gtq-black.ahk
     """
-    ﻿nm_gotoramp()
+    nm_gotoramp()
     path_handler.nm_walk(10, "BackKey")
     path_handler.nm_walk(13.5, "RightKey")
     path_handler.nm_walk(6, "FwdKey")
@@ -3055,7 +3053,7 @@ def gtq_brown(path_handler: PathHandler, move_method: str = "walk"):
     Gtq-Brown path
     Converted from paths/gtq-brown.ahk
     """
-    ﻿if (MoveMethod = "walk")
+    if MoveMethod == "walk":
     {
     path_handler.nm_gotoramp()
     path_handler.nm_walk(44.75, "BackKey", "LeftKey")
@@ -3088,7 +3086,7 @@ def gtq_bucko(path_handler: PathHandler, move_method: str = "walk"):
     Gtq-Bucko path
     Converted from paths/gtq-bucko.ahk
     """
-    ﻿if (MoveMethod = "walk")
+    if MoveMethod == "walk":
     {
     path_handler.nm_gotoramp()
     path_handler.nm_walk(88.875, "BackKey", "LeftKey")
@@ -3131,7 +3129,7 @@ def gtq_bucko(path_handler: PathHandler, move_method: str = "walk"):
     path_handler.nm_walk(6.5, "FwdKey")
     sleep 100
     path_handler.send_key_sequence("{{space down}}")
-    Hypersleep(300)
+    path_handler.hyper_sleep(300)
     path_handler.send_key_sequence("{{space up}}")
     path_handler.nm_walk(5, "FwdKey")
     # path 230630 noobyguy
@@ -3142,7 +3140,7 @@ def gtq_honey(path_handler: PathHandler, move_method: str = "walk"):
     Gtq-Honey path
     Converted from paths/gtq-honey.ahk
     """
-    ﻿if (MoveMethod = "walk")
+    if MoveMethod == "walk":
     {
     path_handler.nm_gotoramp()
     path_handler.nm_walk(67.5, "BackKey", "LeftKey")
@@ -3199,7 +3197,7 @@ def gtq_polar(path_handler: PathHandler, move_method: str = "walk"):
     Gtq-Polar path
     Converted from paths/gtq-polar.ahk
     """
-    ﻿if (MoveMethod = "walk"){
+    if MoveMethod == "walk":{
     path_handler.nm_gotoramp()
     path_handler.nm_walk(67.5, "BackKey", "LeftKey")
     path_handler.send_key_sequence("{{")
@@ -3238,7 +3236,7 @@ def gtq_riley(path_handler: PathHandler, move_method: str = "walk"):
     Gtq-Riley path
     Converted from paths/gtq-riley.ahk
     """
-    ﻿nm_gotoramp()
+    nm_gotoramp()
     send("{" SC_Space " down}"), sleep(100)
     send("{" SC_Space " up}")
     path_handler.nm_walk(2, "RightKey")
@@ -3282,7 +3280,7 @@ def wf_bamboo(path_handler: PathHandler, move_method: str = "walk"):
     Wf-Bamboo path
     Converted from paths/wf-bamboo.ahk
     """
-    ﻿nm_Walk(16, LeftKey)
+    nm_Walk(16, LeftKey)
     path_handler.nm_walk(5, "RightKey")
     path_handler.send_key_sequence("{{")
     path_handler.nm_walk(75, "RightKey")
@@ -3307,7 +3305,7 @@ def wf_blueflower(path_handler: PathHandler, move_method: str = "walk"):
     Wf-Blueflower path
     Converted from paths/wf-blueflower.ahk
     """
-    ﻿send "{" RotRight " 2}"
+    send "{" RotRight " 2}"
     path_handler.nm_walk(13.5, "FwdKey")
     path_handler.nm_walk(4.5, "BackKey")
     path_handler.nm_walk(46, "RightKey")
@@ -3331,7 +3329,7 @@ def wf_cactus(path_handler: PathHandler, move_method: str = "walk"):
     Wf-Cactus path
     Converted from paths/wf-cactus.ahk
     """
-    ﻿nm_Walk(8, BackKey)
+    nm_Walk(8, BackKey)
     path_handler.nm_walk(10, "LeftKey", "BackKey")
     path_handler.nm_walk(14.5, "BackKey")
     path_handler.nm_walk(28, "LeftKey")
@@ -3359,7 +3357,7 @@ def wf_clover(path_handler: PathHandler, move_method: str = "walk"):
     Wf-Clover path
     Converted from paths/wf-clover.ahk
     """
-    ﻿nm_Walk(18, FwdKey)
+    nm_Walk(18, FwdKey)
     path_handler.nm_walk(36, "RightKey")
     path_handler.nm_walk(4.5, "BackKey")
     path_handler.nm_walk(50.5, "RightKey")
@@ -3381,7 +3379,7 @@ def wf_coconut(path_handler: PathHandler, move_method: str = "walk"):
     Wf-Coconut path
     Converted from paths/wf-coconut.ahk
     """
-    ﻿nm_Walk(20.25, RightKey)
+    nm_Walk(20.25, RightKey)
     path_handler.send_key_sequence("{{")
     Walk(22.5)
     path_handler.send_key_sequence("{{space down}}")
@@ -3402,7 +3400,7 @@ def wf_dandelion(path_handler: PathHandler, move_method: str = "walk"):
     Wf-Dandelion path
     Converted from paths/wf-dandelion.ahk
     """
-    ﻿send "{" RotRight " 2}"
+    send "{" RotRight " 2}"
     path_handler.nm_walk(13.5, "FwdKey")
     path_handler.nm_walk(42, "RightKey")
     path_handler.nm_walk(28, "FwdKey")
@@ -3419,7 +3417,7 @@ def wf_mountaintop(path_handler: PathHandler, move_method: str = "walk"):
     Wf-Mountaintop path
     Converted from paths/wf-mountaintop.ahk
     """
-    ﻿Loop 15
+    Loop 15
     {
     path_handler.nm_walk(3, "BackKey")
     path_handler.nm_walk(1, "LeftKey")
@@ -3444,7 +3442,7 @@ def wf_mushroom(path_handler: PathHandler, move_method: str = "walk"):
     Wf-Mushroom path
     Converted from paths/wf-mushroom.ahk
     """
-    ﻿nm_Walk(13.5, FwdKey)   ;move to rear of mushroom field
+    nm_Walk(13.5, FwdKey)   ;move to rear of mushroom field
     path_handler.nm_walk(27, "LeftKey")
     path_handler.send_key_sequence("{{")
     path_handler.nm_walk(11.5, "LeftKey")
@@ -3466,7 +3464,7 @@ def wf_pepper(path_handler: PathHandler, move_method: str = "walk"):
     Wf-Pepper path
     Converted from paths/wf-pepper.ahk
     """
-    ﻿nm_Walk(42, RightKey)
+    nm_Walk(42, RightKey)
     path_handler.send_key_sequence("{{")
     path_handler.nm_walk(45, "FwdKey")
     path_handler.nm_walk(50, "LeftKey")
@@ -3485,7 +3483,7 @@ def wf_pineapple(path_handler: PathHandler, move_method: str = "walk"):
     Wf-Pineapple path
     Converted from paths/wf-pineapple.ahk
     """
-    ﻿nm_Walk(18, FwdKey)
+    nm_Walk(18, FwdKey)
     path_handler.nm_walk(31.5, "RightKey")
     path_handler.nm_walk(4, "LeftKey")
     path_handler.nm_walk(10, "BackKey")
@@ -3494,13 +3492,13 @@ def wf_pineapple(path_handler: PathHandler, move_method: str = "walk"):
     path_handler.nm_walk(60, "FwdKey")
     path_handler.nm_walk(5.5, "BackKey")
     path_handler.nm_walk(10, "RightKey")
-    if (HiveBees < 12) {
+    if HiveBees < 12) {
     path_handler.nm_walk(12, "FwdKey")
     path_handler.nm_walk(8, "RightKey")
     path_handler.send_key_sequence("{{")
     path_handler.send_key_sequence("{{")
     path_handler.send_key_sequence("{{space down}}")
-    Hypersleep(200)
+    path_handler.hyper_sleep(200)
     path_handler.send_key_sequence("{{space up}}")
     path_handler.send_key_sequence("{{")
     nm_walk(30, FwdKey)
@@ -3514,14 +3512,14 @@ def wf_pineapple(path_handler: PathHandler, move_method: str = "walk"):
     path_handler.nm_walk(27, "FwdKey")
     else {
     path_handler.send_key_sequence("{{space down}}")
-    Hypersleep(50)
+    path_handler.hyper_sleep(50)
     path_handler.send_key_sequence("{{space up}}")
     nm_walk(4, rightkey)
-    Hypersleep(1100)
+    path_handler.hyper_sleep(1100)
     path_handler.send_key_sequence("{{e down}}")
     path_handler.hyper_sleep(100)
     path_handler.send_key_sequence("{{e up}}")
-    Hypersleep(3000)
+    path_handler.hyper_sleep(3000)
     path_handler.nm_walk(34, "FwdKey")
     switch HiveSlot
     {
@@ -3536,12 +3534,12 @@ def wf_pineapple(path_handler: PathHandler, move_method: str = "walk"):
     # [2024-01-15/rpertusio] Aligns with default SpawnLocation, saves walking if player chose Hive 3
 
 
-def wf_pinetree(path_handler: PathHandler, move_method: str = "walk"):
+def wf_pinetree(path_handler: PathHandler, move_method: str == "walk"::
     """
     Wf-Pinetree path
     Converted from paths/wf-pinetree.ahk
     """
-    ﻿If ((HiveBees < 25) || (MoveMethod = "Walk")) {
+    If ((HiveBees < 25) || (MoveMethod = "Walk")) {
     path_handler.nm_walk(31, "FwdKey")
     path_handler.nm_walk(75, "RightKey")
     path_handler.send_key_sequence("{{")
@@ -3611,7 +3609,7 @@ def wf_pumpkin(path_handler: PathHandler, move_method: str = "walk"):
     Wf-Pumpkin path
     Converted from paths/wf-pumpkin.ahk
     """
-    ﻿nm_Walk(9, RightKey)
+    nm_Walk(9, RightKey)
     path_handler.send_key_sequence("{{")
     path_handler.nm_walk(9, "BackKey")
     path_handler.send_key_sequence("{{")
@@ -3646,7 +3644,7 @@ def wf_rose(path_handler: PathHandler, move_method: str = "walk"):
     Wf-Rose path
     Converted from paths/wf-rose.ahk
     """
-    ﻿nm_Walk(12, FwdKey)
+    nm_Walk(12, FwdKey)
     path_handler.nm_walk(20, "LeftKey")
     path_handler.nm_walk(8, "RightKey")
     path_handler.send_key_sequence("{{")
@@ -3669,7 +3667,7 @@ def wf_spider(path_handler: PathHandler, move_method: str = "walk"):
     Wf-Spider path
     Converted from paths/wf-spider.ahk
     """
-    ﻿nm_Walk(22.5, FwdKey)
+    nm_Walk(22.5, FwdKey)
     path_handler.nm_walk(27, "LeftKey")
     path_handler.send_key_sequence("{{")
     path_handler.nm_walk(64, "FwdKey")
@@ -3692,7 +3690,7 @@ def wf_strawberry(path_handler: PathHandler, move_method: str = "walk"):
     Wf-Strawberry path
     Converted from paths/wf-strawberry.ahk
     """
-    ﻿Send "{" RotLeft " 2}"
+    Send "{" RotLeft " 2}"
     path_handler.nm_walk(12, "BackKey")
     path_handler.nm_walk(15, "BackKey", "LeftKey")
     path_handler.nm_walk(18, "LeftKey")
@@ -3718,7 +3716,7 @@ def wf_stump(path_handler: PathHandler, move_method: str = "walk"):
     Wf-Stump path
     Converted from paths/wf-stump.ahk
     """
-    ﻿nm_Walk(40.5, RightKey)
+    nm_Walk(40.5, RightKey)
     path_handler.send_key_sequence("{{")
     path_handler.nm_walk(22.5, "RightKey")
     path_handler.nm_walk(22.5, "BackKey")
@@ -3726,13 +3724,13 @@ def wf_stump(path_handler: PathHandler, move_method: str = "walk"):
     path_handler.nm_walk(40.5, "FwdKey")
     path_handler.nm_walk(5.5, "BackKey")
     path_handler.nm_walk(10, "RightKey")
-    if (HiveBees < 12) { ;walk
+    if HiveBees < 12) { ;walk
     path_handler.nm_walk(12, "FwdKey")
     path_handler.nm_walk(8, "RightKey")
     path_handler.send_key_sequence("{{")
     path_handler.send_key_sequence("{{")
     path_handler.send_key_sequence("{{space down}}")
-    Hypersleep(200)
+    path_handler.hyper_sleep(200)
     path_handler.send_key_sequence("{{space up}}")
     path_handler.send_key_sequence("{{")
     nm_walk(30, FwdKey)
@@ -3746,14 +3744,14 @@ def wf_stump(path_handler: PathHandler, move_method: str = "walk"):
     path_handler.nm_walk(27, "FwdKey")
     else { ;use yellow cannon
     path_handler.send_key_sequence("{{space down}}")
-    Hypersleep(50)
+    path_handler.hyper_sleep(50)
     path_handler.send_key_sequence("{{space up}}")
     nm_walk(4, rightkey)
-    Hypersleep(1100)
+    path_handler.hyper_sleep(1100)
     path_handler.send_key_sequence("{{e down}}")
     path_handler.hyper_sleep(100)
     path_handler.send_key_sequence("{{e up}}")
-    Hypersleep(3000)
+    path_handler.hyper_sleep(3000)
     path_handler.nm_walk(34, "FwdKey")
     switch HiveSlot
     {
@@ -3768,12 +3766,12 @@ def wf_stump(path_handler: PathHandler, move_method: str = "walk"):
     # [2024-01-15/rpertusio] Aligns with default SpawnLocation, saves walking if player chose Hive 3
 
 
-def wf_sunflower(path_handler: PathHandler, move_method: str = "walk"):
+def wf_sunflower(path_handler: PathHandler, move_method: str == "walk"::
     """
     Wf-Sunflower path
     Converted from paths/wf-sunflower.ahk
     """
-    ﻿send "{" RotLeft " 2}"
+    send "{" RotLeft " 2}"
     path_handler.nm_walk(13.5, "RightKey")
     path_handler.nm_walk(45, "FwdKey")
     path_handler.nm_walk(2.25, "BackKey")

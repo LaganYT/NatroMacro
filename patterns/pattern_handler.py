@@ -90,7 +90,7 @@ def squares(pattern_handler: PatternHandler, reps: int, size: float = 1.0):
     """
     for _ in range(reps):
         pattern_handler.send_key_sequence("{w down}")
-        pattern_handler.nm_walk(5 * size + 1)  # A_Index starts from 1
+        pattern_handler.nm_walk(5 * size + 1)  # (_ + 1) starts from 1
         pattern_handler.send_key_sequence("{w up}{a down}")
         pattern_handler.nm_walk(5 * size + 1)
         pattern_handler.send_key_sequence("{a up}{s down}")
@@ -225,117 +225,117 @@ def Auryn(pattern_handler: PatternHandler, reps: int, size: float = 1.0):
     Auryn gathering pattern
     Converted from patterns/Auryn.ahk
     """
-    ﻿;Auryn Gathering Path
-    AurynDelay:=175
+    # Auryn Gathering Path
+    auryn_delay = 175
     for _ in range(reps):
         # infinity
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*1.4)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*1.4)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*3*1.4)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*3*1.4)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*1.4)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*1.4)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*1.4)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*1.4)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*3*1.4)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*3*1.4)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*1.4)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*1.4)
         pattern_handler.send_key_sequence("{{")
         # big circle
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*2)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*2)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*2*1.4)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*2*1.4)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*2)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*2)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*2*1.4)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*2*1.4)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*2)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*2)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*2*1.4)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*2*1.4)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*2)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*2)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*2*1.4)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*2*1.4)
         pattern_handler.send_key_sequence("{{")
         # FLIP!!
         # move to other side (half circle)
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*2)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*2)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*2*1.4)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*2*1.4)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*2)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*2)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*2*1.4)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*2*1.4)
         pattern_handler.send_key_sequence("{{")
         pattern_handler.send_key_sequence("{{")
         # pause here
-        HyperSleep(50)
+        pattern_handler.hyper_sleep(50)
         # reverse infinity
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*1.4)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*1.4)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*3*1.4)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*3*1.4)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*1.4)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*1.4)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*1.4)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*1.4)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*1.4)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*1.4)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*1.4)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*1.4)
         pattern_handler.send_key_sequence("{{")
         # big circle
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*2)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*2)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*2*1.4)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*2*1.4)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*2)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*2)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*2*1.4)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*2*1.4)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*2)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*2)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*2*1.4)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*2*1.4)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*2)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*2)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*2*1.4)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*2*1.4)
         pattern_handler.send_key_sequence("{{")
         # FLIP!!
         # move to other side (half circle)
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*2)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*2)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*2*1.4)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*2*1.4)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*2)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*2)
         pattern_handler.send_key_sequence("{{")
-        Walk(AurynDelay*9/2000*size*A_Index*1.1*2*1.4)
+        pattern_handler.nm_walk(auryn_delay*9/2000*size*(_ + 1)*1.1*2*1.4)
         pattern_handler.send_key_sequence("{{")
         pattern_handler.send_key_sequence("{{")
 
@@ -345,7 +345,7 @@ def CornerXSnake(pattern_handler: PatternHandler, reps: int, size: float = 1.0):
     Cornerxsnake gathering pattern
     Converted from patterns/CornerXSnake.ahk
     """
-    ﻿send "{" TCLRKey " down}"
+    pattern_handler.send_key_sequence("{a down}")
     pattern_handler.nm_walk(4 * size)
     pattern_handler.send_key_sequence("{{")
     pattern_handler.nm_walk(2 * size)
@@ -356,7 +356,7 @@ def CornerXSnake(pattern_handler: PatternHandler, reps: int, size: float = 1.0):
     pattern_handler.send_key_sequence("{{")
     pattern_handler.nm_walk(8 * size)
     pattern_handler.send_key_sequence("{{")
-    Walk( Sqrt( ( ( 8 * size ) ** 2 ) + ( ( 8 * size ) ** 2 ) ) )
+    pattern_handler.nm_walk( Sqrt( ( ( 8 * size ) ** 2 ) + ( ( 8 * size ) ** 2 ) ) )
     pattern_handler.send_key_sequence("{{")
     pattern_handler.nm_walk(8 * size)
     pattern_handler.send_key_sequence("{{")
@@ -364,13 +364,13 @@ def CornerXSnake(pattern_handler: PatternHandler, reps: int, size: float = 1.0):
     pattern_handler.send_key_sequence("{{")
     pattern_handler.nm_walk(8 * size)
     pattern_handler.send_key_sequence("{{")
-    Walk(6.7 * size + 10)
+    pattern_handler.nm_walk(6.7 * size + 10)
     pattern_handler.send_key_sequence("{{")
-    Walk(6 + reps)
+    pattern_handler.nm_walk(6 + reps)
     pattern_handler.send_key_sequence("{{")
     pattern_handler.nm_walk(3)
     pattern_handler.send_key_sequence("{{")
-    Walk(2 + reps)
+    pattern_handler.nm_walk(2 + reps)
     pattern_handler.send_key_sequence("{{")
     pattern_handler.nm_walk(5)
     pattern_handler.send_key_sequence("{{")
@@ -392,7 +392,7 @@ def CornerXSnake(pattern_handler: PatternHandler, reps: int, size: float = 1.0):
     pattern_handler.send_key_sequence("{{")
     pattern_handler.nm_walk(8 * size)
     pattern_handler.send_key_sequence("{{")
-    Walk( Sqrt( ( ( 4 * size ) ** 2 ) + ( ( 4 * size ) ** 2 ) ) )
+    pattern_handler.nm_walk( Sqrt( ( ( 4 * size ) ** 2 ) + ( ( 4 * size ) ** 2 ) ) )
     pattern_handler.send_key_sequence("{{")
 
 
@@ -401,16 +401,16 @@ def Diamonds(pattern_handler: PatternHandler, reps: int, size: float = 1.0):
     Diamonds gathering pattern
     Converted from patterns/Diamonds.ahk
     """
-    ﻿loop reps {
-    pattern_handler.send_key_sequence("{{")
-    Walk(5 * size + A_Index)
-    pattern_handler.send_key_sequence("{{")
-    Walk(5 * size + A_Index)
-    pattern_handler.send_key_sequence("{{")
-    Walk(5 * size + A_Index)
-    pattern_handler.send_key_sequence("{{")
-    Walk(5 * size + A_Index)
-    pattern_handler.send_key_sequence("{{")
+    for _ in range(reps):
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(5 * size + (_ + 1))
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(5 * size + (_ + 1))
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(5 * size + (_ + 1))
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(5 * size + (_ + 1))
+        pattern_handler.send_key_sequence("{{")
 
 
 def e_lol(pattern_handler: PatternHandler, reps: int, size: float = 1.0):
@@ -418,73 +418,74 @@ def e_lol(pattern_handler: PatternHandler, reps: int, size: float = 1.0):
     E Lol gathering pattern
     Converted from patterns/e-lol.ahk
     """
-    ﻿spacingDelay:=274 ;183
+    spacing_delay = 274  # 183
     pattern_handler.send_key_sequence("{{")
-    Walk(spacingDelay*9/2000*(reps*2+1))
-    pattern_handler.send_key_sequence("{{")
-    pattern_handler.nm_walk(5 * size)
-    pattern_handler.send_key_sequence("{{")
-    for _ in range(reps):
-        pattern_handler.send_key_sequence("{{")
-        Walk(spacingDelay*9/2000)
-        pattern_handler.send_key_sequence("{{")
-        pattern_handler.nm_walk(5 * size)
-        pattern_handler.send_key_sequence("{{")
-        Walk(spacingDelay*9/2000)
-        pattern_handler.send_key_sequence("{{")
-        Walk((1094+25*facingcorner)*9/2000*size)
-        pattern_handler.send_key_sequence("{{")
-    pattern_handler.send_key_sequence("{{")
-    Walk(spacingDelay*9/2000*(reps*2+0.5))
+    pattern_handler.nm_walk(spacing_delay*9/2000*(reps*2+1))
     pattern_handler.send_key_sequence("{{")
     pattern_handler.nm_walk(5 * size)
     pattern_handler.send_key_sequence("{{")
     for _ in range(reps):
         pattern_handler.send_key_sequence("{{")
-        Walk(spacingDelay*9/2000)
+        pattern_handler.nm_walk(spacing_delay*9/2000)
         pattern_handler.send_key_sequence("{{")
-        Walk((1094+25*facingcorner)*9/2000*size)
+        pattern_handler.nm_walk(5 * size)
         pattern_handler.send_key_sequence("{{")
-        Walk(spacingDelay*9/2000*1.5)
+        pattern_handler.nm_walk(spacing_delay*9/2000)
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk((1094+25*facingcorner)*9/2000*size)
+        pattern_handler.send_key_sequence("{{")
+    pattern_handler.send_key_sequence("{{")
+    pattern_handler.nm_walk(spacing_delay*9/2000*(reps*2+0.5))
+    pattern_handler.send_key_sequence("{{")
+    pattern_handler.nm_walk(5 * size)
+    pattern_handler.send_key_sequence("{{")
+    for _ in range(reps):
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(spacing_delay*9/2000)
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk((1094+25*facingcorner)*9/2000*size)
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(spacing_delay*9/2000*1.5)
         pattern_handler.send_key_sequence("{{")
         pattern_handler.nm_walk(5 * size)
         pattern_handler.send_key_sequence("{{")
 
 
-def Fork(pattern_handler: PatternHandler, reps: int, size: float = 1.0):
+def Fork(pattern_handler: PatternHandler, reps: int, size: float = 1.0, facingcorner: bool = False):
     """
     Fork gathering pattern
     Converted from patterns/Fork.ahk
     """
-    ﻿CForkGap:=0.75 ;flowers between lines
-    CForkDiagonal := CForkGap*sqrt(2)
-    CForkLength := (40-CForkGap*16-CForkDiagonal*4)/6
-    if(facingcorner) {
-    pattern_handler.send_key_sequence("{{")
-    Walk(1.5, 10)
-    pattern_handler.send_key_sequence("{{")
-    pattern_handler.send_key_sequence("{{")
-    Walk(CForkDiagonal*2)
-    pattern_handler.send_key_sequence("{{")
-    Walk(((reps-1)*4+2)*CForkGap)
-    pattern_handler.send_key_sequence("{{")
-    Walk(CForkDiagonal*2)
-    pattern_handler.send_key_sequence("{{")
-    for _ in range(reps):
-        Walk(CForkLength * size, 99)
+    import math
+    c_fork_gap = 0.75  # flowers between lines
+    c_fork_diagonal = c_fork_gap * math.sqrt(2)
+    c_fork_length = (40 - c_fork_gap * 16 - c_fork_diagonal * 4) / 6
+    if facingcorner:
         pattern_handler.send_key_sequence("{{")
-        Walk(CForkGap*2)
+        pattern_handler.nm_walk(1.5, 10)
         pattern_handler.send_key_sequence("{{")
-        Walk(CForkLength * size, 99)
         pattern_handler.send_key_sequence("{{")
-        Walk(CForkGap*2)
+        pattern_handler.nm_walk(c_fork_diagonal*2)
         pattern_handler.send_key_sequence("{{")
-    Walk(CForkLength * size, 99)
-    pattern_handler.send_key_sequence("{{")
-    Walk(CForkGap*2)
-    pattern_handler.send_key_sequence("{{")
-    Walk(CForkLength * size, 99)
-    pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(((reps-1)*4+2)*c_fork_gap)
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(c_fork_diagonal*2)
+        pattern_handler.send_key_sequence("{{")
+        for _ in range(reps):
+            pattern_handler.nm_walk(c_fork_length * size, 99)
+            pattern_handler.send_key_sequence("{{")
+            pattern_handler.nm_walk(c_fork_gap*2)
+            pattern_handler.send_key_sequence("{{")
+            pattern_handler.nm_walk(c_fork_length * size, 99)
+            pattern_handler.send_key_sequence("{{")
+            pattern_handler.nm_walk(c_fork_gap*2)
+            pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(c_fork_length * size, 99)
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(c_fork_gap*2)
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(c_fork_length * size, 99)
+        pattern_handler.send_key_sequence("{{")
 
 
 def Lines(pattern_handler: PatternHandler, reps: int, size: float = 1.0):
@@ -492,16 +493,16 @@ def Lines(pattern_handler: PatternHandler, reps: int, size: float = 1.0):
     Lines gathering pattern
     Converted from patterns/Lines.ahk
     """
-    ﻿loop reps {
-    pattern_handler.send_key_sequence("{{")
-    pattern_handler.nm_walk(11 * size)
-    pattern_handler.send_key_sequence("{{")
-    pattern_handler.nm_walk(1)
-    pattern_handler.send_key_sequence("{{")
-    pattern_handler.nm_walk(11 * size)
-    pattern_handler.send_key_sequence("{{")
-    pattern_handler.nm_walk(1)
-    pattern_handler.send_key_sequence("{{")
+    for _ in range(reps):
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(11 * size)
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(1)
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(11 * size)
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(1)
+        pattern_handler.send_key_sequence("{{")
     # away from center
     for _ in range(reps):
         pattern_handler.send_key_sequence("{{")
@@ -520,12 +521,12 @@ def Slimline(pattern_handler: PatternHandler, reps: int, size: float = 1.0):
     Slimline gathering pattern
     Converted from patterns/Slimline.ahk
     """
-    ﻿send "{" TCLRKey " down}"
-    Walk(( 4 * size ) + ( reps * 0.1 ) - 0.1)
+    pattern_handler.send_key_sequence("{a down}")
+    pattern_handler.nm_walk((4 * size) + (reps * 0.1) - 0.1)
     pattern_handler.send_key_sequence("{{")
-    Walk( 8 * size )
+    pattern_handler.nm_walk( 8 * size )
     pattern_handler.send_key_sequence("{{")
-    Walk( 4 * size )
+    pattern_handler.nm_walk( 4 * size )
     pattern_handler.send_key_sequence("{{")
 
 
@@ -534,16 +535,16 @@ def Snake(pattern_handler: PatternHandler, reps: int, size: float = 1.0):
     Snake gathering pattern
     Converted from patterns/Snake.ahk
     """
-    ﻿loop reps {
-    pattern_handler.send_key_sequence("{{")
-    pattern_handler.nm_walk(11 * size)
-    pattern_handler.send_key_sequence("{{")
-    pattern_handler.nm_walk(1)
-    pattern_handler.send_key_sequence("{{")
-    pattern_handler.nm_walk(11 * size)
-    pattern_handler.send_key_sequence("{{")
-    pattern_handler.nm_walk(1)
-    pattern_handler.send_key_sequence("{{")
+    for _ in range(reps):
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(11 * size)
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(1)
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(11 * size)
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(1)
+        pattern_handler.send_key_sequence("{{")
     # away from center
     for _ in range(reps):
         pattern_handler.send_key_sequence("{{")
@@ -562,16 +563,16 @@ def Squares(pattern_handler: PatternHandler, reps: int, size: float = 1.0):
     Squares gathering pattern
     Converted from patterns/Squares.ahk
     """
-    ﻿loop reps {
-    pattern_handler.send_key_sequence("{{")
-    Walk(5 * size + A_Index)
-    pattern_handler.send_key_sequence("{{")
-    Walk(5 * size + A_Index)
-    pattern_handler.send_key_sequence("{{")
-    Walk(5 * size + A_Index)
-    pattern_handler.send_key_sequence("{{")
-    Walk(5 * size + A_Index)
-    pattern_handler.send_key_sequence("{{")
+    for _ in range(reps):
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(5 * size + (_ + 1))
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(5 * size + (_ + 1))
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(5 * size + (_ + 1))
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(5 * size + (_ + 1))
+        pattern_handler.send_key_sequence("{{")
 
 
 def Stationary(pattern_handler: PatternHandler, reps: int, size: float = 1.0):
@@ -579,7 +580,8 @@ def Stationary(pattern_handler: PatternHandler, reps: int, size: float = 1.0):
     Stationary gathering pattern
     Converted from patterns/Stationary.ahk
     """
-    ﻿Sleep 10000
+    import time
+    time.sleep(10)
 
 
 def SuperCat(pattern_handler: PatternHandler, reps: int, size: float = 1.0):
@@ -587,42 +589,42 @@ def SuperCat(pattern_handler: PatternHandler, reps: int, size: float = 1.0):
     Supercat gathering pattern
     Converted from patterns/SuperCat.ahk
     """
-    ﻿loop reps {
-    pattern_handler.send_key_sequence("{{")
-    pattern_handler.nm_walk(1.25 * size)
-    pattern_handler.send_key_sequence("{{")
-    Walk(7 * size, 10)
-    pattern_handler.send_key_sequence("{{")
-    pattern_handler.nm_walk(1.25 * size)
-    pattern_handler.send_key_sequence("{{")
-    Walk(6.66 * size, 10)
-    pattern_handler.send_key_sequence("{{")
-    pattern_handler.nm_walk(1.25 * size)
-    pattern_handler.send_key_sequence("{{")
-    Walk(7 * size, 10)
-    pattern_handler.send_key_sequence("{{")
-    pattern_handler.nm_walk(2 * size)
-    pattern_handler.send_key_sequence("{{")
-    Walk(6.5 * size, 10)
-    pattern_handler.send_key_sequence("{{")
     for _ in range(reps):
         pattern_handler.send_key_sequence("{{")
         pattern_handler.nm_walk(1.25 * size)
         pattern_handler.send_key_sequence("{{")
-        Walk(7 * size, 10)
-        pattern_handler.send_key_sequence("{{")
-        pattern_handler.nm_walk(1 * size)
-        pattern_handler.send_key_sequence("{{")
-        Walk(6.66 * size, 10)
+        pattern_handler.nm_walk(7 * size, 10)
         pattern_handler.send_key_sequence("{{")
         pattern_handler.nm_walk(1.25 * size)
         pattern_handler.send_key_sequence("{{")
-        Walk(7 * size, 10)
+        pattern_handler.nm_walk(6.66 * size, 10)
         pattern_handler.send_key_sequence("{{")
         pattern_handler.nm_walk(1.25 * size)
         pattern_handler.send_key_sequence("{{")
-        Walk(6.5 * size, 10)
+        pattern_handler.nm_walk(7 * size, 10)
         pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(2 * size)
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(6.5 * size, 10)
+        pattern_handler.send_key_sequence("{{")
+        for _ in range(reps):
+            pattern_handler.send_key_sequence("{{")
+            pattern_handler.nm_walk(1.25 * size)
+            pattern_handler.send_key_sequence("{{")
+            pattern_handler.nm_walk(7 * size, 10)
+            pattern_handler.send_key_sequence("{{")
+            pattern_handler.nm_walk(1 * size)
+            pattern_handler.send_key_sequence("{{")
+            pattern_handler.nm_walk(6.66 * size, 10)
+            pattern_handler.send_key_sequence("{{")
+            pattern_handler.nm_walk(1.25 * size)
+            pattern_handler.send_key_sequence("{{")
+            pattern_handler.nm_walk(7 * size, 10)
+            pattern_handler.send_key_sequence("{{")
+            pattern_handler.nm_walk(1.25 * size)
+            pattern_handler.send_key_sequence("{{")
+            pattern_handler.nm_walk(6.5 * size, 10)
+            pattern_handler.send_key_sequence("{{")
 
 
 def XSnake(pattern_handler: PatternHandler, reps: int, size: float = 1.0):
@@ -630,45 +632,46 @@ def XSnake(pattern_handler: PatternHandler, reps: int, size: float = 1.0):
     Xsnake gathering pattern
     Converted from patterns/XSnake.ahk
     """
-    ﻿loop reps {
-    pattern_handler.send_key_sequence("{{")
-    pattern_handler.nm_walk(4 * size)
-    pattern_handler.send_key_sequence("{{")
-    pattern_handler.nm_walk(2 * size)
-    pattern_handler.send_key_sequence("{{")
-    pattern_handler.nm_walk(8 * size)
-    pattern_handler.send_key_sequence("{{")
-    pattern_handler.nm_walk(2 * size)
-    pattern_handler.send_key_sequence("{{")
-    pattern_handler.nm_walk(8 * size)
-    pattern_handler.send_key_sequence("{{")
-    Walk(Sqrt( ( ( 8 * size ) ** 2 ) + ( ( 8 * size ) ** 2 )))
-    pattern_handler.send_key_sequence("{{")
-    pattern_handler.nm_walk(8 * size)
-    pattern_handler.send_key_sequence("{{")
-    pattern_handler.nm_walk(2 * size)
-    pattern_handler.send_key_sequence("{{")
-    pattern_handler.nm_walk(8 * size)
-    pattern_handler.send_key_sequence("{{")
-    pattern_handler.nm_walk(6.7 * size)
-    pattern_handler.send_key_sequence("{{")
-    pattern_handler.nm_walk(8 * size)
-    pattern_handler.send_key_sequence("{{")
-    pattern_handler.nm_walk(2 * size)
-    pattern_handler.send_key_sequence("{{")
-    pattern_handler.nm_walk(8 * size)
-    pattern_handler.send_key_sequence("{{")
-    pattern_handler.nm_walk(2 * size)
-    pattern_handler.send_key_sequence("{{")
-    pattern_handler.nm_walk(8 * size)
-    pattern_handler.send_key_sequence("{{")
-    pattern_handler.nm_walk(2 * size)
-    pattern_handler.send_key_sequence("{{")
-    pattern_handler.nm_walk(8 * size)
-    pattern_handler.send_key_sequence("{{")
-    pattern_handler.nm_walk(3 * size)
-    pattern_handler.send_key_sequence("{{")
-    pattern_handler.nm_walk(8 * size)
-    pattern_handler.send_key_sequence("{{")
-    Walk(Sqrt( ( ( 4 * size ) ** 2 ) + ( ( 4 * size ) ** 2 )))
-    pattern_handler.send_key_sequence("{{")
+    import math
+    for _ in range(reps):
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(4 * size)
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(2 * size)
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(8 * size)
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(2 * size)
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(8 * size)
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(math.sqrt( ( ( 8 * size ) ** 2 ) + ( ( 8 * size ) ** 2 )))
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(8 * size)
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(2 * size)
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(8 * size)
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(6.7 * size)
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(8 * size)
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(2 * size)
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(8 * size)
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(2 * size)
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(8 * size)
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(2 * size)
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(8 * size)
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(3 * size)
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(8 * size)
+        pattern_handler.send_key_sequence("{{")
+        pattern_handler.nm_walk(math.sqrt( ( ( 4 * size ) ** 2 ) + ( ( 4 * size ) ** 2 )))
+        pattern_handler.send_key_sequence("{{")
