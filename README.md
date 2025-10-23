@@ -163,6 +163,31 @@ This macOS version replaces the Windows AutoHotkey functionality with:
 - ✅ **Complex Patterns**: SuperCat, XSnake, Stationary
 - ✅ **All pattern variations with proper parameter handling**
 
+#### **Image Assets (23 bitmap collections)**
+- ✅ **beemenu**: Bee menu UI elements (gifted, beedigit0-9)
+- ✅ **boost**: Field boost indicators for all fields
+- ✅ **buffs**: Active buff detection images
+- ✅ **collect**: Collection/dispenser UI elements
+- ✅ **convert**: Convert menu UI elements
+- ✅ **fdc**: Field capacity indicators
+- ✅ **general**: Common UI elements (e_button, redcannon, itemmenu, etc.)
+- ✅ **gui**: General GUI components
+- ✅ **inventory**: Inventory management UI
+- ✅ **kill**: Enemy/mob detection images
+- ✅ **memorymatch**: Memory match game assets
+- ✅ **mutator**: Mutator UI elements
+- ✅ **mutatorgui**: Mutator GUI components
+- ✅ **night**: Night mode assets
+- ✅ **offset**: Position offset data
+- ✅ **perfstats**: Performance statistics UI
+- ✅ **quests**: Quest-related UI elements
+- ✅ **reconnect**: Reconnection UI elements
+- ✅ **reset**: Reset functionality UI
+- ✅ **sprinkler**: Sprinkler management UI
+- ✅ **stickerprinter**: Sticker printer UI
+- ✅ **stickerstack**: Sticker stack UI
+- ✅ **webhook_gui**: Webhook configuration UI
+
 #### **Python API Available:**
 ```python
 # Path execution with movement method selection
@@ -173,10 +198,23 @@ macro.path_handler.execute_path("gtc_blender", "cannon")    # Cannon path (where
 macro.pattern_handler.execute_pattern("squares", reps=5, size=1.5)
 macro.pattern_handler.execute_pattern("auryn", reps=10, size=1.0)
 macro.pattern_handler.execute_pattern("fork", reps=3, size=2.0, facingcorner=True)
+
+# Image recognition using built-in bitmap assets
+from lib.image_assets import get_bitmap_image, list_bitmaps
+
+# Search for UI elements by bitmap key
+macro.image_search.search_bitmap_on_screen("e_button")      # Find E button
+macro.image_search.search_bitmap_on_screen("redcannon")     # Find red cannon
+macro.image_search.wait_for_bitmap("itemmenu", timeout=10) # Wait for item menu
+
+# Access bitmap data directly
+e_button_image = get_bitmap_image("e_button")  # PIL Image object
+all_bitmaps = list_bitmaps()                   # List all available bitmaps
 ```
 
 ### 🔧 **Current Status:**
 - ✅ **All AHK files converted to Python functions**
+- ✅ **All image assets converted (23 bitmap collections)**
 - ✅ **Modern Python architecture with proper error handling**
 - ✅ **Cross-platform compatibility (macOS, Windows, Linux)**
 - ✅ **Modular design with separate path and pattern handlers**
@@ -186,6 +224,7 @@ macro.pattern_handler.execute_pattern("fork", reps=3, size=2.0, facingcorner=Tru
 - Core functionality is complete and functional
 - Minor syntax cleanup remaining for some path functions
 - All pattern functions are syntactically correct
+- All bitmap assets are properly converted and accessible
 - Main macro framework is fully operational
 
 ## 🐛 Troubleshooting
@@ -240,7 +279,8 @@ natro_macro.py              # Main macro script with modular architecture
 │   └── path_handler.py     # 99 movement path functions
 ├── patterns/
 │   └── pattern_handler.py  # 24 gathering pattern functions
-├── nm_image_assets/        # Image templates for visual detection
+├── nm_image_assets/        # Original image files (PNG, etc.)
+├── lib/image_assets/       # Converted bitmap assets (Python modules)
 ├── submacros/             # Background automation scripts (empty)
 ├── start.sh               # Cross-platform startup script
 ├── requirements.txt       # Python dependencies

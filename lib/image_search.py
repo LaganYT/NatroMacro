@@ -10,6 +10,10 @@ from PIL import Image
 import logging
 from pathlib import Path
 import time
+import base64
+import io
+
+from .image_assets import get_bitmap_image, bitmap_exists
 
 logger = logging.getLogger(__name__)
 
@@ -190,6 +194,79 @@ class ImageSearch:
 
             if result:
                 return result
+
+            time.sleep(0.5)  # Check every 500ms
+
+        return None
+
+    def search_bitmap(self, bitmap_key, output_list=None, outer_x1=0, outer_y1=0,
+                     outer_x2=0, outer_y2=0, variation=0, trans_color=None,
+                     search_direction=1, center_results=False):
+        """
+        Search for a bitmap by key within the screen
+
+        Args:
+            bitmap_key: Key from image_assets (e.g., 'e_button', 'redcannon')
+            output_list: List to store found coordinates (x, y)
+            outer_x1, outer_y1, outer_x2, outer_y2: Search region bounds
+            variation: Color variation tolerance (0-255)
+            trans_color: Transparent color (RGB)
+            search_direction: Search direction (1-8)
+            center_results: Whether to return center coordinates
+
+        Returns:
+            Number of matches found (negative = error)
+        """
+        try:
+            if not bitmap_exists(bitmap_key):
+                logger.error(f"Bitmap key not found: {bitmap_key}")
+                return -1
+
+            # Get PIL image from bitmap
+            needle_pil = get_bitmap_image(bitmap_key)
+
+            # Convert PIL to OpenCV format
+            needle = cv2.cvtColor(np.array(needle_pil), cv2.COLOR_RGB2BGR)
+
+            # Use existing image search logic
+            return self._search_image(needle, output_list, outer_x1, outer_y1,
+                                    outer_x2, outer_y2, variation, trans_color,
+                                    search_direction, center_results)
+
+        except Exception as e:
+            logger.error(f"Error searching bitmap {bitmap_key}: {e}")
+            return -3
+
+    def search_bitmap_on_screen(self, bitmap_key, variation=0):
+        """
+        Simple bitmap search on entire screen
+        Returns: (x, y) of first match or None
+        """
+        output_list = []
+        result = self.search_bitmap(bitmap_key, output_list, variation=variation)
+
+        if result > 0 and output_list:
+            return output_list[0]
+        return None
+
+    def wait_for_bitmap(self, bitmap_key, timeout=30, region=None, variation=0):
+        """
+        Wait for a bitmap to appear on screen
+        Returns: (x, y) of match or None if timeout
+        """
+        start_time = time.time()
+
+        while time.time() - start_time < timeout:
+            if region:
+                output_list = []
+                x1, y1, x2, y2 = region
+                result = self.search_bitmap(bitmap_key, output_list, x1, y1, x2, y2, variation)
+                if result > 0 and output_list:
+                    return output_list[0]
+            else:
+                result = self.search_bitmap_on_screen(bitmap_key, variation)
+                if result:
+                    return result
 
             time.sleep(0.5)  # Check every 500ms
 
