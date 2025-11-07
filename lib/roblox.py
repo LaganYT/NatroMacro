@@ -5,7 +5,7 @@ Equivalent to lib/Roblox.ahk
 
 import logging
 import Quartz
-import CoreGraphics
+from Quartz import CoreGraphics
 from AppKit import NSWorkspace
 import time
 
@@ -16,6 +16,8 @@ class RobloxController:
         self.macro = macro_instance
         self.roblox_app = None
         self.window_bounds = None
+        self.last_bounds_update = 0
+        self.bounds_cache_duration = 2.0  # Cache bounds for 2 seconds
 
     def get_roblox_hwnd(self):
         """
@@ -54,12 +56,20 @@ class RobloxController:
 
         return None
 
-    def get_roblox_client_pos(self, hwnd=None):
+    def get_roblox_client_pos(self, hwnd=None, force_update=False):
         """
         Update global window coordinates for Roblox client
         Equivalent to GetRobloxClientPos()
         Returns: True if successful, False otherwise
         """
+        current_time = time.time()
+
+        # Use cached bounds if recent enough and not forcing update
+        if (not force_update and
+            self.window_bounds and
+            current_time - self.last_bounds_update < self.bounds_cache_duration):
+            return True
+
         if not hwnd:
             hwnd = self.get_roblox_hwnd()
 
@@ -84,6 +94,7 @@ class RobloxController:
                     bounds = window.get('kCGWindowBounds')
                     if bounds:
                         self.window_bounds = bounds
+                        self.last_bounds_update = current_time
                         self.macro.window_x = int(bounds['X'])
                         self.macro.window_y = int(bounds['Y'])
                         self.macro.window_width = int(bounds['Width'])
@@ -91,12 +102,17 @@ class RobloxController:
                         return True
 
             # Fallback: assume full screen if no window found
-            logger.warning("Could not get exact window bounds, using fallback")
+            # Only warn if we haven't warned recently or if this is the first time
+            if not hasattr(self, '_last_fallback_warning') or current_time - self._last_fallback_warning > 30:
+                logger.warning("Could not get exact window bounds, using fallback")
+                self._last_fallback_warning = current_time
+
             screen_size = Quartz.CGDisplayBounds(Quartz.CGMainDisplayID())
             self.macro.window_x = 0
             self.macro.window_y = 0
             self.macro.window_width = int(screen_size.size.width)
             self.macro.window_height = int(screen_size.size.height)
+            self.last_bounds_update = current_time
             return True
 
         except Exception as e:

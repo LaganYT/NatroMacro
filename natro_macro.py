@@ -128,7 +128,7 @@ class NatroMacro:
             try:
                 if proc.info['pid'] != current_pid:
                     cmdline = proc.info.get('cmdline', [])
-                    if any('natro_macro.py' in str(cmd) for cmd in cmdline):
+                    if cmdline and any('natro_macro.py' in str(cmd) for cmd in cmdline):
                         logger.info(f"Terminating existing instance (PID: {proc.info['pid']})")
                         proc.terminate()
                         proc.wait(timeout=5)
@@ -203,11 +203,11 @@ class NatroMacro:
                     time.sleep(5)
                     continue
 
-                # Example: Update window position
+                # Update window position only when needed (cached internally)
                 self.get_roblox_client_pos()
 
                 # Sleep to prevent excessive CPU usage
-                time.sleep(0.1)
+                time.sleep(0.5)  # Reduced frequency to prevent spam
 
         except KeyboardInterrupt:
             logger.info("Macro stopped by user")

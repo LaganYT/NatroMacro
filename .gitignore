@@ -46,3 +46,4 @@ lib-cov
 /test/test-apps/*/dist
 MMScreenshots/*
 **__pycache__**
+venv/
